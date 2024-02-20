@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Regression</title>
+    </head>
+    <body>
+        <form method="post" action="{% url 'predict' 0 %}">
+            {% csrf_token %}
+
+            <label>Number of cylinders:</label>
+            <input type="number" name="cylinders" max="8" min="3" size="15" required> <br><br>
+
+            <label>Enter displacement:</label>
+            <input type="number" name="displacement" max="455" min="68" step=".1" size="15" required> <br><br>
+
+            <label>Enter horsepower:</label>
+            <input type="number" name="horsepower" max="230" min="46" step=".1" size="15" required> <br><br>
+
+            <label>Enter weight:</label>
+            <input type="number" name="weight" max="5140" min="1613" size="15" required> <br><br>
+
+            <label>Enter acceleration:</label>
+            <input type="number" name="acceleration" max="24.8" min="8" step=".1" size="15" required> <br><br>
+
+            <label>Enter model year:</label>
+            <input type="number" name="year" max="82" min="70" size="15" required> <br><br>
+
+            <label>Enter origin:</label>
+            <input type="number" name="origin" max="3" min="1" size="15" required> <br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </body>
+</html>
