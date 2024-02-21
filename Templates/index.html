@@ -3,11 +3,56 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+                margin: 0;
+                padding: 0;
+            }
+            form {
+                max-width: 500px;
+                margin: 50px auto;
+                margin-top: 100px;
+                text-align: center;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                border: none;
+                transition: background-color 0.3s;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+            button[type="submit"] {
+                margin-right: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+                margin-top: 50px;
+            }
+        </style>
     </head>
     <body>
+        <h1>Welcome!</h1>
         <form method="post" action="{% url 'class' %}">
             {% csrf_token %}
-            <button type="submit">Classification</button> &emsp;&emsp;
+            <button type="submit">Classification</button>
             <button type="submit" formaction="{% url 'reg' %}">Regression</button>
         </form>
     </body>

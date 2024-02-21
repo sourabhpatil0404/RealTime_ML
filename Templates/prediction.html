@@ -2,7 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Prediction</title>
+        <title>Result</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .form-box {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            h2 {
+                color: black;
+                font-size: 24px;
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
         {% if classification %}
