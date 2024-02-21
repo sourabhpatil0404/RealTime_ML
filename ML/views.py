@@ -95,7 +95,7 @@ def predict(request, pk):
             model = pickle.load(file)
 
         prediction = model.predict(df)
-        result = f'The estimated gas price is: {prediction[0]:.3f} MPG'
+        result = f'The estimated gas consumption is: {prediction[0]:.3f} MPG'
 
         return render(request, 'prediction.html', {'classification': False, 'result': result})
 
