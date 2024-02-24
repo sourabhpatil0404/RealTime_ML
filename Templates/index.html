@@ -11,7 +11,7 @@
                 padding: 0;
             }
             form {
-                max-width: 500px;
+                max-width: 600px;
                 margin: 50px auto;
                 margin-top: 100px;
                 text-align: center;
@@ -52,8 +52,8 @@
         <h1>Welcome!</h1>
         <form method="post" action="{% url 'class' %}">
             {% csrf_token %}
-            <button type="submit">Classification</button>
-            <button type="submit" formaction="{% url 'reg' %}">Regression</button>
+            <button type="submit">Heart Disease Detection</button>
+            <button type="submit" formaction="{% url 'reg' %}">Fuel Consumption Prediction</button>
         </form>
     </body>
 </html>

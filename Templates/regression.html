@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Regression</title>
+        <title>Fuel Consumption Prediction</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -31,6 +31,15 @@
                 border-radius: 3px;
                 box-sizing: border-box;
             }
+            input[type="radio"] {
+                width: auto;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                margin-right: 5px;
+            }
             button {
                 background-color: #4CAF50;
                 color: white;
@@ -57,26 +66,29 @@
         <form method="post" action="{% url 'predict' 0 %}">
             {% csrf_token %}
 
-            <label>Number of cylinders:</label>
+            <label>Number of cylinders in the engine:</label>
             <input type="number" name="cylinders" max="8" min="3" size="15" required> <br><br>
 
-            <label>Enter displacement:</label>
+            <label>Enter engine's displacement (in in<sup>3</sup>):</label>
             <input type="number" name="displacement" max="455" min="68" step=".1" size="15" required> <br><br>
 
-            <label>Enter horsepower:</label>
+            <label>Enter horsepower of the engine (in hp):</label>
             <input type="number" name="horsepower" max="230" min="46" step=".1" size="15" required> <br><br>
 
-            <label>Enter weight:</label>
+            <label>Enter weight of the car (in Lbs):</label>
             <input type="number" name="weight" max="5140" min="1613" size="15" required> <br><br>
 
-            <label>Enter acceleration:</label>
+            <label>Time taken to accelerate from 0 to 60 miles/hr (in s):</label>
             <input type="number" name="acceleration" max="24.8" min="8" step=".1" size="15" required> <br><br>
 
-            <label>Enter model year:</label>
+            <label>Enter year of manufacture (1970 - 1982):</label>
             <input type="number" name="year" max="82" min="70" size="15" required> <br><br>
 
-            <label>Enter origin:</label>
-            <input type="number" name="origin" max="3" min="1" size="15" required> <br><br>
+            <label>Select place of manufacture:</label>
+            <input type="radio" name="origin" value="1" required>American
+            <input type="radio" name="origin" value="2">European
+            <input type="radio" name="origin" value="3">Japanese
+            <br><br>
 
             <button type="submit">Predict</button>
         </form>

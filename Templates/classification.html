@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Classification</title>
+        <title>Heart Disease Detection</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
                 padding: 0;
             }
             form {
-                max-width: 600px;
+                max-width: 550px;
                 margin: 50px auto;
                 padding: 20px;
                 background-color: rgba(255, 255, 255, 0.8);
@@ -64,50 +64,50 @@
     <body>
         <form method="post" action="{% url 'predict' 1 %}">
             {% csrf_token %}
-            <label>Enter age in years:</label>
+            <label>Enter age of the patient (in years):</label>
             <input type="number" name="age" max="77" min="28" size="15" required> <br><br>
 
-            <label>Select gender:</label>
+            <label>Select gender of the patient:</label>
             <input type="radio" name="gender" value="M" required>Male
             <input type="radio" name="gender" value="F">Female
             <br><br>
 
-            <label>Select chest pain type:</label>
+            <label>Type of chest pain:</label>
             <input type="radio" name="chest_pain" value="ATA" required>Atypical Anginal
             <input type="radio" name="chest_pain" value="ASY">Asymptomatic
             <input type="radio" name="chest_pain" value="TA">Typical Anginal
             <input type="radio" name="chest_pain" value="NAP">Non-Anginal
             <br><br>
 
-            <label>Enter resting blood pressure (in mm Hg):</label>
+            <label>Enter blood pressure (in mm Hg):</label>
             <input type="number" name="resting_blood_pressure" max="200" min="0" size="15" required> <br><br>
 
-            <label>Enter serum cholesterol (in mm/dl):</label>
+            <label>Enter serum cholesterol (in mg/dL):</label>
             <input type="number" name="cholesterol" max="603" min="0" size="15" required> <br><br>
             
-            <label>Select fasting blood sugar type:</label>
-            <input type="radio" name="blood_sugar" value="1" required>> 120 mg/dl
+            <label>Select blood sugar quantity:</label>
+            <input type="radio" name="blood_sugar" value="1" required>> 120 mg/dL
             <input type="radio" name="blood_sugar" value="0">Otherwise
             <br><br>
 
-            <label>Select resting electrocardiogram:</label>
+            <label>Type of electrocardiogram:</label>
             <input type="radio" name="ecg" value="Normal" required>Normal
             <input type="radio" name="ecg" value="ST">ST-T wave abnormality
             <input type="radio" name="ecg" value="LVH">Left ventricular hypertrophy
             <br><br>
 
-            <label>Enter maximum heart rate achieved (in mm/dl):</label>
+            <label>Enter maximum heart rate achieved (in bpm):</label>
             <input type="number" name="heart_rate" max="202" min="60" size="15" required> <br><br>
 
-            <label>Select exercise induced angina:</label>
+            <label>Any pain induced on exercising:</label>
             <input type="radio" name="exercise_angina" value="Y" required>Yes
             <input type="radio" name="exercise_angina" value="N">No
             <br><br>
 
-            <label>Enter oldpeak:</label>
+            <label>Enter slope value of the ST graph:</label>
             <input type="number" name="old_peak" max="6.2" min="-2.6" step=".1" size="15" required> <br><br>
 
-            <label>Select slope of peak ST segment:</label>
+            <label>Type of slope of the ST graph:</label>
             <input type="radio" name="peak_st" value="Up" required>Upsloping
             <input type="radio" name="peak_st" value="Flat">Flat
             <input type="radio" name="peak_st" value="Down">Downsloping
