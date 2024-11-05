@@ -1,10 +1,10 @@
-1. **Dual-Purpose ML Project**: Detects heart disease and predicts vehicle fuel consumption in real-time.
+- **Dual-Purpose ML Project**: Detects heart disease and predicts vehicle fuel consumption in real-time.
 
-2. **Python-Based Platform**: Users enter data via an easy front-end and get instant results.
+- **Python-Based Platform**: Users enter data via an easy front-end and get instant results.
 
-3. **Real-Time Big Data Handling**: Continuously trained on big data for accurate, up-to-date predictions.
+- **Real-Time Big Data Handling**: Continuously trained on big data for accurate, up-to-date predictions.
 
-4. **Instant Predictions**: Delivers fast insights, reducing lag between data input and prediction output.
+- **Instant Predictions**: Delivers fast insights, reducing lag between data input and prediction output.
 
 
 ## Requirements
